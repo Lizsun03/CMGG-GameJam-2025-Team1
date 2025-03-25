@@ -117,7 +117,7 @@ label twisty:
     show artist 
     artist "Which one?"
     show alex
-    a "I think he’s talking about that weird shape-y thing over there. Behind the boxes."
+    a "I think they're talking about that weird shape-y thing over there. Behind the boxes."
 
     "You’re not quite sure, but something seems to shift in the artist’s face. His smile’s bigger, which is really nice! But… maybe too big? Is that even possible?"
 
