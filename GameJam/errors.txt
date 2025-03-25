@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 113: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a " at the end of the first line.)
-        artist "Oh – Ha! Isn’t she pretty? I based her off of the lovely ladies of Tower Town – have you ever been? They’re all so fashionable, so graceful – so I thought to myself, ‘Why not roll them all into one?’ And here she is: Tower-Town Tory! If you swing back next week, I’ll have her best friend ready, too – Tower-Town Tony.”
+File "game/script.rpy", line 166: end of line expected.
+    scene bg black $ renpy.pause(3.0)
+                   ^
+
+File "game/script.rpy", line 167: end of line expected.
+    scene bg lab $ renpy.pause(2.0)
+                 ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 24 22:19:47 2025
+Mon Mar 24 22:33:59 2025

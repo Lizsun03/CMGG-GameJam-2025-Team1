@@ -1,0 +1,24 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 142, in script
+    x "Oh… Oh well! Can’t please them all. As I was saying, nothing says bakery quite like sprawling fields of grain…"
+Exception: Sayer 'x' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 142, in script
+    x "Oh… Oh well! Can’t please them all. As I was saying, nothing says bakery quite like sprawling fields of grain…"
+  File "/Users/johannaliu/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 2586, in execute
+    Say.execute(self)
+  File "/Users/johannaliu/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 583, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "/Users/johannaliu/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 472, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'x' is not defined.
+
+macOS-12.4-arm64-arm-64bit arm64
+Ren'Py 8.3.7.25031702
+GameJam 1.0
+Mon Mar 24 22:38:56 2025

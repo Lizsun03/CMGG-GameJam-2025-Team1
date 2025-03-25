@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -48,23 +48,23 @@ menu:
 label maybe_dizzy:
     a "Hah! Don’t worry, you’ll get used to it. We can take it easy to start off – there’s a few side stalls on the perimeter we can check out."
     narrator "You sigh with relief. You can always get to the big stuff later – but a warm-up round doesn’t sound half bad. Besides, everyone knows the best items are the ones you have to hunt for!"
-    $ dizzy = true 
-    jump end
+    $ dizzy = True 
+    #jump end
 
 label fine_dizzy:
     a "Me? I’m great. And since we’re clearly both great, I guess that means you surely wouldn’t mind checking out the big stalls first?"
     narrator "You giggle nervously. You’ll get over it if you just jump right into the deep end. Plus, imagine if all the good stuff sold out before you got there!"
     
-    $ dizzy = false
+    $ dizzy = False
     
-    jump end
+    #jump end
 
 # SCENE 2
-if dizzy == true:
+if dizzy == True:
     scene bg awayfromcrowd
     "Away from the crowds and chaos exploding along the main drag, the two of you find yourselves able to stroll calmly. With fewer people around, you can actually see inside each stall without needing to shove your way forward."
 
-elif dizzy == false:
+elif dizzy == False:
     scene bg crowd
     "The two of you throw yourselves head-first into the fray! The crowds are dense, but you and 4L3X are seasoned and stubborn. Darting between giddy customers and awed tourists, you finally find a pocket of air right in front of a few stalls that haven’t opened yet."
 
@@ -86,9 +86,9 @@ scene bg in_stall
 
 artist "Whatever you want, whatever you want! We don’t mess around here – all originals, all mine! Anything that speaks to you, just let me know, and I’ll tell you aaaall about it."
 
-renpy.mark_label_unseen("landscape")
-renpy.mark_label_unseen("hologram")
-renpy.mark_label_unseen("twisty")
+$ renpy.mark_label_unseen("landscape")
+$ renpy.mark_label_unseen("hologram")
+$ renpy.mark_label_unseen("twisty")
 
 label painting:
 #https://www.reddit.com/r/RenPy/commenyts/prftqd/how_do_i_add_multiple_conversation_choices/
@@ -110,7 +110,7 @@ label landscape:
 
 label hologram: 
     show artist
-    artist "Oh – Ha! Isn’t she pretty? I based her off of the lovely ladies of Tower Town – have you ever been? They’re all so fashionable, so graceful – so I thought to myself, ‘Why not roll them all into one?’ And here she is: Tower-Town Tory! If you swing back next week, I’ll have her best friend ready, too – Tower-Town Tony.”
+    artist "Oh – Ha! Isn’t she pretty? I based her off of the lovely ladies of Tower Town – have you ever been? They’re all so fashionable, so graceful – so I thought to myself, ‘Why not roll them all into one?’ And here she is: Tower-Town Tory! If you swing back next week, I’ll have her best friend ready, too – Tower-Town Tony."
     jump painting 
 
 label twisty:
@@ -139,7 +139,7 @@ label twisty:
 menu: 
     "I just wanna look at it for a sec!":
         "The artist’s smile is HUUUGE now! Ginormous! So, why does it feel… weird?"
-        x "Oh… Oh well! Can’t please them all. As I was saying, nothing says bakery quite like sprawling fields of grain…"
+        artist "Oh… Oh well! Can’t please them all. As I was saying, nothing says bakery quite like sprawling fields of grain…"
 
         "Your little fists reach out to brush some boxes away, giving you an even better view of the piece. The world around you almost goes quiet… calm…"
 
@@ -163,8 +163,10 @@ scene bg glitchartstall #flick between the glitched ones to look like active gli
 scene bg glitchartstalltwo
 scene bg glitchartstall
 #make it pause/stay on a scene for a few seconds?
-scene bg black $ renpy.pause(3.0)
-scene bg lab $ renpy.pause(2.0)
+scene bg black 
+$ renpy.pause(3.0)
+scene bg lab 
+$ renpy.pause(2.0)
 scene bg black
 
 define reals = Character("STEVIE")
@@ -198,9 +200,11 @@ reals "..."
 reals "<ERROR>"
 
 scene bg black
+$ renpy.pause(3.0)
 
 # SCENE 4
 label scene4:
+    scene bg in_stall
     artist " – find it works best to stick to tranquil scenery, calm stuff. It’s much easier to sell, y’know?"
 
     artist "People wanna feel happy, that’s all."
