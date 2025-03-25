@@ -1,24 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 142, in script
-    x "Oh… Oh well! Can’t please them all. As I was saying, nothing says bakery quite like sprawling fields of grain…"
-Exception: Sayer 'x' is not defined.
+  File "game/script.rpy", line 43, in script
+    show alex xalign 1.0 at halfsize
+Exception: Image 'alex' does not accept attributes 'xalign 1 .0'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 142, in script
-    x "Oh… Oh well! Can’t please them all. As I was saying, nothing says bakery quite like sprawling fields of grain…"
-  File "/Users/johannaliu/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 2586, in execute
-    Say.execute(self)
-  File "/Users/johannaliu/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 583, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "/Users/johannaliu/Desktop/renpy-8.3.7-sdk/renpy/ast.py", line 472, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'x' is not defined.
+  File "game/script.rpy", line 43, in script
+    show alex xalign 1.0 at halfsize
+  File "C:\Users\yihon\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1124, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\yihon\Downloads\renpy-8.3.7-sdk\renpy\ast.py", line 1087, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\yihon\Downloads\renpy-8.3.7-sdk\renpy\exports\displayexports.py", line 477, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\yihon\Downloads\renpy-8.3.7-sdk\renpy\display\image.py", line 421, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\yihon\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 249, in _duplicate
+    args.extraneous()
+  File "C:\Users\yihon\Downloads\renpy-8.3.7-sdk\renpy\display\displayable.py", line 109, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'alex' does not accept attributes 'xalign 1 .0'.
 
-macOS-12.4-arm64-arm-64bit arm64
+Windows-10-10.0.26100 AMD64
 Ren'Py 8.3.7.25031702
 GameJam 1.0
-Mon Mar 24 22:38:56 2025
+Tue Mar 25 11:16:35 2025

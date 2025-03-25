@@ -2,15 +2,25 @@
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
-
 define s = Character("ST3V13", image="stevie.png")
-define a = Character("4L3X", image="alex.png")
-define artist = Character("xX_ARTIST.152_Xx")
+define a = Character("4L3X", image="alex.png", xpos=0.7)
+define artist = Character("xX_ARTIST.152_Xx", image="artist_wink.png", xpos=0.3)
 define narrator = Character(None, what_italic=True)
 image stevie = "stevie.png"
 image alex = "alex.png"
+image artist = "artist_wink.png"
+image hospital1 = "hospital_1.png"
+image hospital2 = "hospital_2.png"
+image hospital3 = "hospital_3.png"
+image hospital4 = "hospital_4.png"
+image hospital5 = "hospital_5.png"
+image hospital6 = "hospital_6.png"
+image burning = "city.png"
+image run1 = "run_1.png"
+image run2 = "run_2.png"
+image in_stall = "art.png"
+image room = "house a day.png"
 # The game starts here.
-
 # SCENE 1
 label start:
 
@@ -18,8 +28,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
-
+    scene room
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -31,8 +40,11 @@ label start:
     
     transform halfsize:
         zoom 0.5
-    show alex at halfsize
 
+    transform right:    
+        xpos 0.6
+
+    show alex at halfsize right
     a "Ok, I’m glad it’s not just me! Are you good? You look a little dizzy."
     
     # This ends the game.
@@ -68,19 +80,19 @@ elif dizzy == False:
     scene bg crowd
     "The two of you throw yourselves head-first into the fray! The crowds are dense, but you and 4L3X are seasoned and stubborn. Darting between giddy customers and awed tourists, you finally find a pocket of air right in front of a few stalls that haven’t opened yet."
 
-show alex
+show alex at halfsize
 a "This is nice. Really nice. I haven’t been to one of these in so long!"
 a "I’ve got enough gadgets though – mind if we check out some of the more artsy stuff? I wanna find my Nana something cool for her new bakery. Something that’ll really grab people, y’know?"
 
 #show alex happy
 "All you can muster is a nod, which 4L3X jumps on – They grab your hand and pull you along to the closest one, right as the vendor flips a switch."
 
-show artist 
+show artist at halfsize 
 artist "Juuuuust in tiiiiiime! Get on over here – Did you know, you’re the first to see my newest collection! How’s that for a great morning, eh?"
 
 hide alex
 hide artist
-scene bg in_stall
+scene in_stall
 
 "Everywhere you look, warmth and happiness beams right back onto you. Paintings, sculptures, holograms… the mediums may vary, but there’s no doubt that every piece was hand-crafted with pure love and joy."
 
@@ -104,19 +116,19 @@ label painting:
             jump twisty
 
 label landscape:
-        show artist 
+        show artist at halfsize
         artist "It is! If you’ve ever been to LuminoCity, there’s this great sushi bar on top of a hotel where you can see out across the entire city! I’ve made a point of eating dinner there every Monday and Thursday just so I can watch the sunset. The way the light catches the buildings… They look so shiny. That view can be all yours!"
         jump painting
 
 label hologram: 
-    show artist
+    show artist at halfsize 
     artist "Oh – Ha! Isn’t she pretty? I based her off of the lovely ladies of Tower Town – have you ever been? They’re all so fashionable, so graceful – so I thought to myself, ‘Why not roll them all into one?’ And here she is: Tower-Town Tory! If you swing back next week, I’ll have her best friend ready, too – Tower-Town Tony."
     jump painting 
 
 label twisty:
-    show artist 
+    show artist at halfsize
     artist "Which one?"
-    show alex
+    show alex at halfsize 
     a "I think they're talking about that weird shape-y thing over there. Behind the boxes."
 
     "You’re not quite sure, but something seems to shift in the artist’s face. His smile’s bigger, which is really nice! But… maybe too big? Is that even possible?"
@@ -158,19 +170,30 @@ menu:
 
 
 # SCENE 3
-
-scene bg glitchartstall #flick between the glitched ones to look like active glitching
-scene bg glitchartstalltwo
-scene bg glitchartstall
+# scene bg glitchartstall #flick between the glitched ones to look like active glitching
+# scene bg glitchartstalltwo
+# scene bg glitchartstall
 #make it pause/stay on a scene for a few seconds?
 scene bg black 
 $ renpy.pause(3.0)
-scene bg lab 
+# scene bg lab 
+scene hospital1 
+$ renpy.pause(0.5)
+scene hospital2 
+$ renpy.pause(0.5)
+scene hospital3
+$ renpy.pause(0.5)
+scene hospital4 
+$ renpy.pause(0.5)
+scene hospital5 
+$ renpy.pause(0.5)
+scene hospital6 
+
 $ renpy.pause(2.0)
 scene bg black
 
 define reals = Character("STEVIE")
-define cyber = Character("???")
+define cyber = Character("???", image="cyber.png")
 
 reals "...Uhhhhh."
 
@@ -179,18 +202,22 @@ scene bg black
 
 
 #(Sudden cut to the Burning Buildings/People running away background, more glitch noises/sharp noises)
-scene bg burning
-
+scene burning with fade 
+$ renpy.pause(1.0)
+scene run1 with fade
+$ renpy.pause(1.0)
+scene run2 with fade
+$ renpy.pause(1.0)
 #(Sudden cut to black screen again. Wind white noise)
-scene bg black
+scene black
 
 reals "..."
 
-scene bg black
+scene black
 
 scene bg vat
 
-show cyber
+show cyber at halfsize
 cyber "...Wait."
 cyber "Wait wait wait wait –"
 cyber "...Oh. Oh fuck. Shit."

@@ -2,13 +2,25 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 166: end of line expected.
-    scene bg black $ renpy.pause(3.0)
-                   ^
+File "game/script.rpy", line 81: end of line expected.
+    show alex at right with transform halfsize
+                                      ^
 
-File "game/script.rpy", line 167: end of line expected.
-    scene bg lab $ renpy.pause(2.0)
-                 ^
+File "game/script.rpy", line 88: end of line expected.
+    show artist at left with transform halfsize
+                                       ^
+
+File "game/script.rpy", line 122: end of line expected.
+    show artist at left with transform halfsize
+                                       ^
+
+File "game/script.rpy", line 127: end of line expected.
+    show artist at left with transform halfsize
+                                       ^
+
+File "game/script.rpy", line 129: end of line expected.
+    show alex at right with transform halfsize
+                                      ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Mon Mar 24 22:33:59 2025
+Tue Mar 25 10:53:02 2025
