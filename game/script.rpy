@@ -289,7 +289,7 @@ $ renpy.pause(3.0)
 label scene4:
     scene market at market
     show artist_surprise at halfsize
-
+    show alex at midright, halfsize
     artist " – find it works best to stick to tranquil scenery, calm stuff. It’s much easier to sell, y’know?"
 
     artist "People wanna feel happy, that’s all."
