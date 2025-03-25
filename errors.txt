@@ -2,25 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 81: end of line expected.
-    show alex at right with transform halfsize
-                                      ^
-
-File "game/script.rpy", line 88: end of line expected.
-    show artist at left with transform halfsize
-                                       ^
-
-File "game/script.rpy", line 122: end of line expected.
-    show artist at left with transform halfsize
-                                       ^
-
-File "game/script.rpy", line 127: end of line expected.
-    show artist at left with transform halfsize
-                                       ^
-
-File "game/script.rpy", line 129: end of line expected.
-    show alex at right with transform halfsize
-                                      ^
+File "game/script.rpy", line 189: expected menuitem
+    show scene stall2    
+    ^
 
 Ren'Py Version: Ren'Py 8.3.7.25031702
-Tue Mar 25 10:53:02 2025
+Tue Mar 25 12:07:22 2025
