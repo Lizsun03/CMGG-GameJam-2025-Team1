@@ -76,7 +76,7 @@ a "I’ve got enough gadgets though – mind if we check out some of the more ar
 "All you can muster is a nod, which 4L3X jumps on – They grab your hand and pull you along to the closest one, right as the vendor flips a switch."
 
 show artist 
-x "Juuuuust in tiiiiiime! Get on over here – Did you know, you’re the first to see my newest collection! How’s that for a great morning, eh?"
+artist "Juuuuust in tiiiiiime! Get on over here – Did you know, you’re the first to see my newest collection! How’s that for a great morning, eh?"
 
 hide alex
 hide artist
@@ -84,14 +84,14 @@ scene bg in_stall
 
 "Everywhere you look, warmth and happiness beams right back onto you. Paintings, sculptures, holograms… the mediums may vary, but there’s no doubt that every piece was hand-crafted with pure love and joy."
 
-x "Whatever you want, whatever you want! We don’t mess around here – all originals, all mine! Anything that speaks to you, just let me know, and I’ll tell you aaaall about it."
+artist "Whatever you want, whatever you want! We don’t mess around here – all originals, all mine! Anything that speaks to you, just let me know, and I’ll tell you aaaall about it."
 
 renpy.mark_label_unseen("landscape")
 renpy.mark_label_unseen("hologram")
 renpy.mark_label_unseen("twisty")
 
 label painting:
-#https://www.reddit.com/r/RenPy/comments/prftqd/how_do_i_add_multiple_conversation_choices/
+#https://www.reddit.com/r/RenPy/commenyts/prftqd/how_do_i_add_multiple_conversation_choices/
     menu: 
     
         "That landscape is gorgeous! Is it a real place?" if not renpy.seen_label("landscape"):
@@ -190,9 +190,9 @@ scene bg vat
 
 show cyber
 cyber "...Wait."
-cyber "Wait wait wait wait –”
+cyber "Wait wait wait wait –"
 cyber "...Oh. Oh fuck. Shit."
-cyber "Can… Can you hear me?”
+cyber "Can… Can you hear me?"
 
 reals "..."
 reals "<ERROR>"
